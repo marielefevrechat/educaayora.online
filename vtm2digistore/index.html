@@ -7,7 +7,16 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Importa a fonte Open Sans -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
+<script>
+// Função para detectar o tipo de dispositivo
+function isMobileDevice() {
+return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+// Redirecionamento
+if (!isMobileDevice()) {
+window.location.href = "https://gemaacademy.online/obgg/";
+}
+</script>
 
 <script src="https://www.digistore24.com/service/digistore.js"></script>
 <script>digistoreUpsell()</script>
