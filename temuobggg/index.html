@@ -14,6 +14,17 @@
 
     <!-- Título da Página -->
     <title>Gracias</title>
+
+    <script>
+// Função para detectar o tipo de dispositivo
+function isMobileDevice() {
+return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+}
+// Redirecionamento
+if (!isMobileDevice()) {
+window.location.href = "https://gemaacademy.online/obgg/";
+}
+</script>
     
     <style type="text/css">
       body {
