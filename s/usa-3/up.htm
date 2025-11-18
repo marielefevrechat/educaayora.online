@@ -867,19 +867,72 @@ text-align: center;
 </style>
 <div class="html-gXKGFt6193354-element ">
 <div>
-<!-- HOTMART - Upsell Widget -->
-<div id="box_hotmart"></div>
-<script src="https://pay.hotmart.com/assets/js/hotmart.upsell_checkout.js"></script>
+<!-- Seção Hotmart -->
+        <div>
+            <div id="hotmart-container">
+                <div id="box_hotmart">
+                    <!-- HOTMART - Sales Funnel Widget -->
+                    <!--- sales funnel container ---> 
+                    <div id="hotmart-sales-funnel"></div> 
+                    <!--- script load and setup ---> 
+                    <script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script> 
+                    <script> 
+                        checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+                    </script> 
+                    <!-- HOTMART - Sales Funnel Widget -->
+                </div>
+                <div id="cover"></div>
+                <div id="cover2"></div>
+                <!-- Barra principal para esconder parte do conteúdo -->
+            </div>
+        
+            <style>
+                /* Container do widget Hotmart */
+                #hotmart-container {
+                    position: relative;
+                    width: 100%;
+                    max-width: 650px;
+                    height: 420px;
+                    margin: 0 auto;
+                }
+        
+                /* Estilo para o iframe do widget */
+                #box_hotmart {
+                    width: 100%;
+                    height: 100%;
+                }
+        
+                /* Cobre o conteúdo com uma camada branca */
+                #cover {
+                    position: absolute;
+                    top: 215px; /* Ajuste conforme necessário para a posição vertical da cobertura */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 650px; /* Largura da barra principal */
+                    height: 100px; /* Altura da barra principal */
+                    background-color: #FFFFFF; /* Cor branca sólida */
+                    z-index: 3; /* Superior ao conteúdo do iframe */
+                }
 
-<script>
-opts = {
-key: 'USL-155612-541230-fe9d3de7ba249f53652f86134ce9cb0f',
-width: '650' ,
-height: '420'
-};
-Upsell.Widget.show(opts);
-</script>
-<!-- HOTMART - Upsell Widget [end] -->
+                #cover2 {
+                    position: absolute;
+                    top: 0px; /* Ajuste conforme necessário para a posição vertical da cobertura */
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 650px; /* Largura da barra principal */
+                    height: 155px; /* Altura da barra principal */
+                    background-color: #FFFFFF; /* Cor branca sólida */
+                    z-index: 3; /* Superior ao conteúdo do iframe */
+                }
+        
+                /* Responsividade para ajustar o tamanho da cobertura no mobile */
+                @media (max-width: 768px) {
+                    #cover {
+                        width: 100%; /* Ajusta a largura da cobertura no mobile */
+                    }
+                }
+            </style>
+        </div>
 <!-- utmfy -->
 <script
   src="https://cdn.utmify.com.br/scripts/utms/latest.js"
